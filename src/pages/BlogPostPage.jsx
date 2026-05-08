@@ -1,7 +1,6 @@
 import { useEffect } from 'react'
 import { Link, useParams, Navigate } from 'react-router-dom'
 import Header from '../components/Header'
-import AdSlot from '../components/AdSlot'
 import Footer from '../components/Footer'
 import { RiCalendarLine, RiTimeLine, RiArrowLeftLine } from 'react-icons/ri'
 import { blogPosts } from './BlogPage'
@@ -31,9 +30,6 @@ export default function BlogPostPage() {
 
       <div className="relative z-10">
         <Header />
-
-        <AdSlot size="leaderboard" className="my-4 hidden lg:flex" />
-        <AdSlot size="mobile-banner" className="my-4 lg:hidden" />
 
         <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           {/* Breadcrumb */}
@@ -90,18 +86,12 @@ export default function BlogPostPage() {
               </div>
             </header>
 
-            <AdSlot size="leaderboard" className="my-8 hidden lg:flex" />
-            <AdSlot size="mobile-banner" className="my-6 lg:hidden" />
-
             {/* Article Content */}
             <div
               className="blog-content prose max-w-none"
               itemProp="articleBody"
               dangerouslySetInnerHTML={{ __html: post.content }}
             />
-
-            <AdSlot size="leaderboard" className="my-8 hidden lg:flex" />
-            <AdSlot size="mobile-banner" className="my-6 lg:hidden" />
 
             {/* CTA */}
             <div className="mt-12 p-8 rounded-2xl bg-gradient-to-br from-violet-50 to-indigo-50 border border-violet-100 text-center">

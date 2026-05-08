@@ -1,7 +1,6 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Header from '../components/Header'
-import AdSlot from '../components/AdSlot'
 import Footer from '../components/Footer'
 
 export default function TermsPage() {
@@ -22,9 +21,6 @@ export default function TermsPage() {
 
       <div className="relative z-10">
         <Header />
-
-        <AdSlot size="leaderboard" className="my-4 hidden lg:flex" />
-        <AdSlot size="mobile-banner" className="my-4 lg:hidden" />
 
         <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           {/* Breadcrumb */}
@@ -76,9 +72,6 @@ export default function TermsPage() {
                   <li>Accept responsibility for all activity under your account</li>
                   <li>Not create multiple accounts to circumvent usage limits</li>
                 </ul>
-                <p className="mt-3">
-                  Account data is stored locally in your browser. MetaClean does not maintain a centralized user database.
-                </p>
               </section>
 
               <section>
@@ -90,7 +83,6 @@ export default function TermsPage() {
                   <li>Misrepresent the origin or authorship of content</li>
                   <li>Violate any applicable local, state, national, or international law</li>
                   <li>Attempt to reverse-engineer, decompile, or exploit the Service's code for malicious purposes</li>
-                  <li>Overload or disrupt the Service through automated or excessive access</li>
                 </ul>
               </section>
 
@@ -98,12 +90,7 @@ export default function TermsPage() {
                 <h2 className="text-2xl font-bold text-slate-900 mb-4">5. Intellectual Property</h2>
                 <p>
                   The MetaClean name, logo, design, and all associated content (excluding user-uploaded files) are the 
-                  intellectual property of MetaClean. You may not reproduce, distribute, or create derivative works 
-                  from our branding or proprietary content without prior written permission.
-                </p>
-                <p className="mt-3">
-                  You retain full ownership of any files you process through the Service. MetaClean claims no rights 
-                  to your content.
+                  intellectual property of MetaClean. You retain full ownership of any files you process through the Service.
                 </p>
               </section>
 
@@ -111,19 +98,8 @@ export default function TermsPage() {
                 <h2 className="text-2xl font-bold text-slate-900 mb-4">6. Disclaimer of Warranties</h2>
                 <p>
                   MetaClean is provided <strong className="text-slate-900">"as is"</strong> and{' '}
-                  <strong className="text-slate-900">"as available"</strong> without warranties of any kind, either express or implied, including 
-                  but not limited to:
-                </p>
-                <ul className="list-disc pl-6 space-y-2 mt-3 text-slate-500">
-                  <li>Merchantability or fitness for a particular purpose</li>
-                  <li>That the Service will be uninterrupted, error-free, or secure</li>
-                  <li>That all metadata will be completely removed from all file types in all cases</li>
-                  <li>That processed files will maintain identical visual quality to the originals</li>
-                </ul>
-                <p className="mt-3">
-                  While we strive for maximum quality and completeness in metadata removal, we cannot guarantee 
-                  100% removal of all possible metadata in all edge cases. Users should verify results for 
-                  critical privacy needs.
+                  <strong className="text-slate-900">"as available"</strong> without warranties of any kind. While we strive for maximum 
+                  quality and completeness in metadata removal, we cannot guarantee 100% removal of all possible metadata in all edge cases.
                 </p>
               </section>
 
@@ -131,49 +107,28 @@ export default function TermsPage() {
                 <h2 className="text-2xl font-bold text-slate-900 mb-4">7. Limitation of Liability</h2>
                 <p>
                   To the fullest extent permitted by law, MetaClean and its operators shall not be liable for any 
-                  indirect, incidental, special, consequential, or punitive damages, including but not limited to:
-                </p>
-                <ul className="list-disc pl-6 space-y-2 mt-3 text-slate-500">
-                  <li>Loss of data or file corruption during processing</li>
-                  <li>Privacy breaches resulting from incomplete metadata removal</li>
-                  <li>Any damages arising from the use or inability to use the Service</li>
-                  <li>Loss of revenue or business opportunities</li>
-                </ul>
-                <p className="mt-3">
-                  Our total liability for any claim shall not exceed the amount you paid for the Service (which is $0 for free users).
+                  indirect, incidental, special, consequential, or punitive damages, including loss of data, privacy breaches 
+                  resulting from incomplete metadata removal, or any damages arising from the use or inability to use the Service.
                 </p>
               </section>
 
               <section>
-                <h2 className="text-2xl font-bold text-slate-900 mb-4">8. Third-Party Content & Advertising</h2>
+                <h2 className="text-2xl font-bold text-slate-900 mb-4">8. Third-Party Advertising</h2>
                 <p>
                   MetaClean displays third-party advertisements to support free operation. We are not responsible for 
-                  the content, accuracy, or practices of third-party advertisers. Clicking on advertisements may direct 
-                  you to external websites not operated by MetaClean, and we encourage you to review their respective 
-                  privacy policies and terms.
+                  the content or practices of third-party advertisers.
                 </p>
               </section>
 
               <section>
                 <h2 className="text-2xl font-bold text-slate-900 mb-4">9. Service Modifications</h2>
                 <p>
-                  MetaClean reserves the right to modify, suspend, or discontinue the Service (or any part thereof) 
-                  at any time, with or without notice. We shall not be liable to you or any third party for any 
-                  modification, suspension, or discontinuation of the Service.
+                  MetaClean reserves the right to modify, suspend, or discontinue the Service at any time, with or without notice.
                 </p>
               </section>
 
               <section>
-                <h2 className="text-2xl font-bold text-slate-900 mb-4">10. Governing Law</h2>
-                <p>
-                  These Terms shall be governed by and construed in accordance with applicable laws, without regard 
-                  to conflict of law principles. Any disputes arising from these Terms or the use of the Service 
-                  shall be resolved in the appropriate courts of jurisdiction.
-                </p>
-              </section>
-
-              <section>
-                <h2 className="text-2xl font-bold text-slate-900 mb-4">11. Contact</h2>
+                <h2 className="text-2xl font-bold text-slate-900 mb-4">10. Contact</h2>
                 <p>
                   For questions about these Terms of Service, please contact us at:
                 </p>
@@ -183,9 +138,6 @@ export default function TermsPage() {
               </section>
             </div>
           </article>
-
-          <AdSlot size="leaderboard" className="my-8 hidden lg:flex" />
-          <AdSlot size="mobile-banner" className="my-6 lg:hidden" />
         </main>
 
         <Footer />

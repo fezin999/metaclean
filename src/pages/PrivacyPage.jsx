@@ -1,7 +1,6 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Header from '../components/Header'
-import AdSlot from '../components/AdSlot'
 import Footer from '../components/Footer'
 
 export default function PrivacyPage() {
@@ -22,9 +21,6 @@ export default function PrivacyPage() {
 
       <div className="relative z-10">
         <Header />
-
-        <AdSlot size="leaderboard" className="my-4 hidden lg:flex" />
-        <AdSlot size="mobile-banner" className="my-4 lg:hidden" />
 
         <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           {/* Breadcrumb */}
@@ -111,7 +107,7 @@ export default function PrivacyPage() {
                 <h2 className="text-2xl font-bold text-slate-900 mb-4">4. Third-Party Services</h2>
                 <h3 className="text-xl font-semibold text-slate-800 mt-6 mb-3">4.1 Advertising</h3>
                 <p>
-                  MetaClean displays ads to fund free operation. Our advertising partners (Google AdSense, Ezoic) may use cookies 
+                  MetaClean displays ads to fund free operation. Our advertising partners (Google AdSense) may use cookies 
                   to serve relevant ads. You can opt out of personalized advertising through your browser settings or 
                   the <a href="https://optout.aboutads.info/" className="text-violet-600 hover:text-violet-700 underline" target="_blank" rel="noopener noreferrer">DAA opt-out page</a>.
                 </p>
@@ -184,9 +180,6 @@ export default function PrivacyPage() {
               </section>
             </div>
           </article>
-
-          <AdSlot size="leaderboard" className="my-8 hidden lg:flex" />
-          <AdSlot size="mobile-banner" className="my-6 lg:hidden" />
         </main>
 
         <Footer />

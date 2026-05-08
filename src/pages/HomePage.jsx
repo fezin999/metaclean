@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import Header from '../components/Header'
 import Hero from '../components/Hero'
-import AdSlot from '../components/AdSlot'
 import Uploader from '../components/Uploader'
 import Results from '../components/Results'
 import Benefits from '../components/Benefits'
@@ -30,67 +29,29 @@ export default function HomePage() {
       </div>
 
       <div className="relative z-10">
-        {/* Top Ad Banner - Desktop */}
-        <div className="hidden lg:block">
-          <AdSlot size="leaderboard" className="py-2" />
-        </div>
-        {/* Top Ad Banner - Mobile */}
-        <div className="lg:hidden">
-          <AdSlot size="mobile-banner" className="py-2" />
-        </div>
-
         <Header />
 
         <main>
           <Hero />
 
-          {/* Ad between hero and upload */}
-          <AdSlot size="leaderboard" className="my-8 hidden lg:flex" />
-          <AdSlot size="mobile-banner" className="my-4 lg:hidden" />
-
-          {/* Main Tool Section with Sidebar Ad */}
-          <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-            <div className="flex gap-6">
-              {/* Main content */}
-              <div className="flex-1 min-w-0">
-                <Uploader
-                  onProcessed={setProcessedFiles}
-                  isProcessing={isProcessing}
-                  setIsProcessing={setIsProcessing}
-                />
-                {processedFiles.length > 0 && (
-                  <Results files={processedFiles} />
-                )}
-              </div>
-
-              {/* Sidebar Ad - Desktop only */}
-              <div className="hidden xl:block w-[300px] flex-shrink-0">
-                <div className="sticky top-24">
-                  <AdSlot size="sidebar" />
-                </div>
-              </div>
-            </div>
+          {/* Main Tool Section */}
+          <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <Uploader
+              onProcessed={setProcessedFiles}
+              isProcessing={isProcessing}
+              setIsProcessing={setIsProcessing}
+            />
+            {processedFiles.length > 0 && (
+              <Results files={processedFiles} />
+            )}
           </section>
-
-          {/* Ad below results */}
-          <AdSlot size="leaderboard" className="my-8 hidden lg:flex" />
-          <AdSlot size="mobile-banner" className="my-4 lg:hidden" />
 
           <Benefits />
           <SEOContent />
           <FAQ />
-
-          {/* Footer ad */}
-          <AdSlot size="leaderboard" className="my-8 hidden lg:flex" />
-          <AdSlot size="mobile-banner" className="my-4 lg:hidden" />
         </main>
 
         <Footer />
-
-        {/* Sticky bottom ad - Mobile */}
-        <div className="lg:hidden fixed bottom-0 left-0 right-0 z-40">
-          <AdSlot size="sticky-bottom" />
-        </div>
       </div>
     </div>
   )
