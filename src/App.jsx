@@ -6,6 +6,7 @@ import PrivacyPage from './pages/PrivacyPage'
 import BlogPage from './pages/BlogPage'
 import BlogPostPage from './pages/BlogPostPage'
 import TermsPage from './pages/TermsPage'
+import AdminPage from './pages/AdminPage'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/terms" element={<TermsPage />} />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/blog/:slug" element={<BlogPostPage />} />
+          <Route path="/admin" element={<AdminPage />} />
         </Routes>
 
         <Toaster
